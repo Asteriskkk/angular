@@ -1,0 +1,45 @@
+<p>
+  employ works!
+</p>
+<table border="3">
+  <tr >
+    <th>Empno</th>
+    <th>empFullName</th>
+    <th>emailId</th>
+    <th>mobNumber</th>
+    <th>dateOfJoining</th>
+    <th>department</th>
+    <th>availableLeave</th>
+    <th>mgrId</th> 
+    <th>Show</th>
+  </tr>
+  <tr *ngFor="let e of users | async">
+    <td>
+       {{e.empId}}
+    </td>
+    <td>
+      {{e.empFullName}}
+    </td>
+    <td>
+      {{e.emailId}}
+    </td>
+    <td>
+      {{e.mobNumber}}
+    </td>
+    <td>
+      {{e.dateOfJoining}}
+    </td>
+    <td>
+      {{e.department}}
+    </td>
+    <td>
+      {{e.availableLeave}}
+    </td>
+    <td>
+      {{e.mgrId}}
+    </td> 
+    <td>
+      <input type="button" value="Show" (click)="show(e.empId,e.mgrId)" />
+    </td>
+  </tr>
+</table>

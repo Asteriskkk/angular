@@ -1,0 +1,12 @@
+<p>
+  country works!
+</p>
+
+<!-- <ol  *ngFor = "let c of countries">
+<li>{{c.id}}<b>{{c.name}}</b></li>
+</ol>
+ -->
+<select [(ngModel)]="cname">
+  <option *ngFor= "let c of countries" value="{{c.name}}">{{c.name}}</option>"
+</select>
+selected countries <b>{{cname}}</b>

@@ -1,0 +1,21 @@
+<table border="3">
+
+  <tr>
+    <th>EmpNo</th>
+    <th>Name</th>
+    <th>Department</th>
+    <th>Designation</th>
+    <th>Basic</th>
+  </tr>
+  <tr *ngFor="let c of employees">
+<td>{{c.empno}}</td>
+<td>{{c.name}}</td>
+<td>{{c.dept}}</td>
+<td>{{c.desig}}</td>
+<td>{{c.basic}}</td>
+<input type="button" value="show" (click)="show(c.name,c.empno)">
+  </tr>
+</table>
+
+<p>Name is {{name}}</p>
+<p>Employee id is {{id}}</p>
